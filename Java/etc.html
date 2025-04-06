@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick A Flavour</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf7f5;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: left;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .cake-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .cake-item {
+            flex: 1;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .cake-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .cake-item img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .cake-item h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 15px 0;
+        }
+
+        .all-cakes-button {
+            display: inline-block;
+            background-color: #8fae3f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: -4%;
+            
+        }
+
+        .all-cakes-button:hover {
+            background-color: #6b8b2d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Pick A Flavour</h2>
+        <a href="#" class="all-cakes-button" style="float: right;">All Cakes</a>
+        <div class="cake-grid">
+            <div class="cake-item">
+                <img src="https://www.fnp.com/assets/images/custom/cakes_23/flavour/Chocolate-Cakes-web_2.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cakes</h3>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/assets/images/custom/cakes_23/flavour/Truffle-Cakes_web.jpg" alt="Truffle Cake">
+                <h3>Truffle Cakes</h3>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/assets/images/custom/cakes_23/flavour/Fresh-Fruit-Cakes_web.jpg" alt="Fresh Fruit Cake">
+                <h3>Fresh Fruit Cakes</h3>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/assets/images/custom/cakes_23/flavour/Butterscotch-Cakes_web.jpg" alt="Butterscotch Cake">
+                <h3>Butterscotch Cakes</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
