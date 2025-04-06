@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delightful Cakes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6b8e23;
+            --secondary-color: #f4f4f4;
+            --accent-color: #ff6b6b;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+            background-color: var(--secondary-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: relative;
+            top: 0;
+            z-index: 1000;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 1rem;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+        }
+        .search-bar i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+        }
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        .user-actions span {
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        main {
+            display: flex;
+            padding: 2rem;
+            max-width: 1200px;
+            
+        }
+        .filters {
+            width: 250px;
+            margin-right: 1rem;
+            background-color: white;
+            margin-left: 15px;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .filter-group {
+            margin-bottom: 1rem;
+        }
+        .filter-group h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            flex-grow: 1;
+        }
+        .cake-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .cake-item:hover {
+            transform: translateY(-5px);
+        }
+        .cake-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .cake-info {
+            padding: 1rem;
+        }
+        .cake-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .cake-info p {
+            margin-bottom: 0.5rem;
+        }
+        .price {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        .rating {
+            color: #ffd700;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+            }
+            .search-bar {
+                margin: 1rem 0;
+                width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            main {
+                flex-direction: column;
+            }
+            .filters {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">Shree Cakes Library</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search cakes, gifts, etc.">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-actions">
+                <span><i class="fas fa-shopping-cart"></i> Cart</span>
+                <span><i class="fas fa-user"></i> Login</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="birthaday.html"><i class="fas fa-birthday-cake"></i> Birthday</a></li>
+                <li><a href="Annivarsary.html"><i class="fas fa-heart"></i> Anniversary</a></li>
+                <li><a href="Cake.html"><i class="fas fa-list"></i> All Cakes</a></li>
+                <li><a href="#"><i class="fas fa-gift"></i> Personalized</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Occasions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <input type="range" min="0" max="2000" step="100">
+                <p>₹0 - ₹2000</p>
+            </div>
+            <div class="filter-group">
+                <h4>Flavour</h4>
+                <label><input type="checkbox"> Chocolate</label>
+                <label><input type="checkbox"> Vanilla</label>
+                <label><input type="checkbox"> Fruit</label>
+            </div>
+            <div class="filter-group">
+                <h4>Cake Type</h4>
+                <label><input type="checkbox"> Regular</label>
+                <label><input type="checkbox"> Eggless</label>
+                <label><input type="checkbox"> Sugar-free</label>
+            </div>
+            <div class="filter-group">
+                <h4>Weight</h4>
+                <label><input type="radio" name="weight"> 0.5 kg</label>
+                <label><input type="radio" name="weight"> 1 kg</label>
+                <label><input type="radio" name="weight"> 2 kg</label>
+            </div>
+        </aside>
+        <section class="cake-grid">
+            <div class="cake-item">
+                <img src="https://assets.winni.in/product/primary/2014/8/38896.jpeg?dpr=1&w=500" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://assets.winni.in/product/primary/2023/4/84499.jpeg?dpr=1&w=500" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Mouth Melting Chocolate Cake</h3>
+                    <p class="price">₹579</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://cdn.giftstoindia24x7.com/ASP_Img/IMG2000/GTI443046.jpg?imgeng=w_750" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bakesncakes.in/wp-content/uploads/2023/08/3.Butterscotch.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://assets.winni.in/product/primary/2022/9/73538.jpeg?dpr=1&w=500" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://cdn.dotpe.in/longtail/store-items/8180249/2d60bKsy.jpeg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v200/best-dad-truffle-cake-1-kg_1.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/caramel-cake-cake1605cara-AA.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/oreo-chocolate-cake0021chex-AA.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v200/butterscotch-cake-with-rasmalai-1kg_1.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-snicker-chocolate-cake0028choc-AA.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/red-velvet-cake0027reex-AAA.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-german-black-forest-cake0015chbl-AA.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/round-shaped-butterscotch-cake-4-cake892butt-AA.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v200/kitkat-butterscotch-cake-half-kg_1.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://cdn-efokf.nitrocdn.com/ZQRozOsOErnVmjhbXawnlhMkSGhlXiWW/assets/images/optimized/rev-c180654/www.doorstepcake.com/wp-content/uploads/2014/12/butterscotch-cake-1kg-510x510-1.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v20211130185725/dripping-2-tier-butterscotch-cake-2-kg_1.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.ambalacakes.com/data/cache/images/cakes/butter-scotch-cake/heartshape-butter-scotch-cake-440x440.webp" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v200/black-forest-oreo-cake-1-kg_1.jpg" alt="Chocolate Truffle Cake">
+                <div class="cake-info">
+                    <h3>Chocolate Truffle Cake</h3>
+                    <p class="price">₹599</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        4.8
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v200/fruit-overload-cake-half-kg_1.jpg" alt="Fruit Overload Cake">
+                <div class="cake-info">
+                    <h3>Fruit Overload Cake</h3>
+                    <p class="price">₹725</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        5.0
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.fnp.com/images/pr/l/v200/flakey-hearts-black-forest-cake-15-kg-eggless_1.jpg" alt="Black Forest Cake">
+                <div class="cake-info">
+                    <h3>Black Forest Cake</h3>
+                    <p class="price">₹549</p>
+                    <p class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        4.9
+                    </p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                
+            </div>
+            <!-- Add more cake items as needed -->
+        </section>
+        
+    </main>
+    <script>
+        // Simple JavaScript to demonstrate interactivity
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Item added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>

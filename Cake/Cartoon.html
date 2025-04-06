@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6b8e23;
+            --secondary-color: #f4f4f4;
+            --accent-color: #ff6b6b;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #854d12;
+            color: white;
+            padding: 1rem;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 1rem;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 0.8rem;    
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            padding: 1rem;
+        }
+
+        .filters {
+            width: 200px;
+            margin-right: 1rem;
+
+        }
+
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            flex-grow: 1;
+        }
+
+        .cake-item {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .cake-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+            }
+
+            .search-bar {
+                margin: 1rem 0;
+                width: 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            .filters {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: relative;
+            top: 0;
+            z-index: 1000;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 1rem;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+        }
+        .search-bar i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+        }
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        .user-actions span {
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin-right: 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo">Shree Cakes Library</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search cakes, gifts, etc.">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="user-actions">
+                <span><i class="fas fa-shopping-cart"></i> Cart</span>
+                <span><i class="fas fa-user"></i> Login</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fas fa-birthday-cake"></i> Birthday</a></li>
+                <li><a href="#"><i class="fas fa-heart"></i> Anniversary</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> All Cakes</a></li>
+                <li><a href="#"><i class="fas fa-gift"></i> Personalized</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Occasions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="filters">
+            <h3>Cartoon Cakes</h3>
+            <nav>
+                
+            </nav>
+        </aside>
+        <section class="cake-grid">
+            <div class="cake-item">
+                <img src="https://dy9wzeeht8myy.cloudfront.net/images/catalog/Cakes/CH485-350x350.jpg"
+                    alt="Chocolate Truffle Cake">
+                <h3>Pikachu cartoon Cake</h3>
+                <p>₹325</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.frinza.com/assets/templatedata/images/products/d2aa09806988996b8565700def66661b.jpg"
+                    alt="Fruit Overload Cake">
+                <h3>Panda Cake</h3>
+                <p>₹749</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://dy9wzeeht8myy.cloudfront.net/images/catalog/flowers/CH443-350x350.jpg"
+                    alt="Black Forest Cake">
+                <h3>Minion Lover Cake</h3>
+                <p>₹589</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <!-- Add more cake items as needed -->
+            <div class="cake-item">
+                <img src="https://www.giftmyemotions.com/image/cache/floralnation/cakes/ct5-800x800.jpg"
+                    alt="Chocolate Truffle Cake">
+                <h3>1 Kg ShinChan Cartoon Cake</h3>
+                <p>₹849</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.yuvaflowers.com/cdn/shop/files/mickey-mouse-cartoon-cake-1-kg-manual-yuvaflowers-ogc-879-default-title-42166287565080.jpg?v=1711897905"
+                    alt="Fruit Overload Cake">
+                <h3> Mickey Mouse Cartoon Cake 1 kg</h3>
+                <p>₹579</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://cdn.dotpe.in/longtail/store-items/8324429/Gm3N5NLU.webp"
+                    alt="Black Forest Cake">
+                <h3>Pikachoo Cartoon Cake</h3>
+                <p>₹575</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://luvflowercake.com/wp-content/uploads/2021/10/33890_minnie-mouse-cartoon-cake.jpeg"
+                    alt="Chocolate Truffle Cake">
+                <h3>Minnie Mouse Cartoon Cake</h3>
+                <p>₹599</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://yummycake.in/wp-content/uploads/2022/03/rudra-cartoon-theme-cake-online.png"
+                    alt="Fruit Overload Cake">
+                <h3>Rudra Cartoon Theme Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://assets.winni.in/product/primary/2014/6/33976.jpeg?dpr=2&w=220"
+                    alt="Black Forest Cake">
+                <h3>Mickey Mouse Blackforest Cake</h3>
+                <p>₹729</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.onlinedelivery.in/images/detailed/34/af32999f-1aab-4cca-8378-47c40742bb5d.jpg"
+                    alt="Chocolate Truffle Cake">
+                <h3>Dora cartoon Cakes</h3>
+                <p>₹629</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.sendbestgift.com/assets/images/product/20dd48766a3b53542717a3a920db290b.jpg"
+                    alt="Fruit Overload Cake">
+                <h3>Cartoon Cake 1 Kg Cat</h3>
+                <p>₹699</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.asansolcake.com/wp-content/uploads/2021/06/panda-cake-1.jpg"
+                    alt="Black Forest Cake">
+                <h3>Choco Truffle Panda Cake</h3>
+                <p>₹799</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://dy9wzeeht8myy.cloudfront.net/images/catalog/Cakes/CH520-600x600.jpg"
+                    alt="Chocolate Truffle Cake">
+                <h3>Doraemon Cartoon Cake</h3>
+                <p>₹649</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.gogift.in/images/detailed/26/5011.jpg"
+                    alt="Fruit Overload Cake">
+                <h3>Cartoon birthday Cake</h3>
+                <p>₹579</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.thecake.in/image/cache/catalog/cake/doraemon-kids-chocolate-photo-cake-from-TC-1000x1000.jpg"
+                    alt="Black Forest Cake">
+                <h3>Doraemon Cartoon Cake</h3>
+                <p>₹529</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.thecake.in/image/cache/catalog/cake/tom-n-jerry-photo-cake-from-TC-500x500.jpg"
+                    alt="Chocolate Truffle Cake">
+                <h3>Tom And Jerry Photo Cake</h3>
+                <p>₹669</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://dy9wzeeht8myy.cloudfront.net/images/catalog/flowers/CH421-350x350.jpg"
+                    alt="Fruit Overload Cake">
+                <h3>Spiderman Cream Cake</h3>
+                <p>₹799</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://cakelinks.in/cdn/shop/files/Doremon-photo-cake.png?v=1723190644"
+                    alt="Black Forest Cake">
+                <h3>Doremon Cake</h3>
+                <p>₹649</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.giftmyemotions.com/image/cache/floralnation/amazone/157857258433-600x600-800x800.jpg"
+                    alt="Chocolate Truffle Cake">
+                <h3>Ben 10 Theme Cartoon Cake 1 Kg</h3>
+                <p>₹629</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://d2bx56ij40tihp.cloudfront.net/giftdecorshop.com/storage/app/public/cdn_gds_WebApp//product/11-10-2018/cartoon_cake/cartoon_lovely_bear_cake_1584095977_large.webp"
+                    alt="Fruit Overload Cake">
+                <h3>Cartoon Lovely Bear Cake </h3>
+                <p>₹799</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.sendbestgift.com/assets/images/product/86c9102b68163887bfb79f780f45dae2.jpg"
+                    alt="Black Forest Cake">
+                <h3>Mickey Mouse Cartoon Cake</h3>
+                <p>₹849</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://cakiyo.com/_next/image?url=https%3A%2F%2Fadmin.cakiyo.com%2Fstorage%2F3262%2Fmusical-theme.png&w=3840&q=75"
+                    alt="Chocolate Truffle Cake">
+                <h3>Delicious Cartoon Cake</h3>
+                <p>₹699</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://cakiyo.com/_next/image?url=https%3A%2F%2Fadmin.cakiyo.com%2Fstorage%2F2947%2FCake-with-lion-face-cream-and-fondant.jpg&w=750&q=75"
+                    alt="Fruit Overload Cake">
+                <h3>Lion Face Theme Cake (1kg)</h3>
+                <p>₹925</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://cakiyo.com/_next/image?url=https%3A%2F%2Fadmin.cakiyo.com%2Fstorage%2F4161%2FMickey-mouse-clubhouse-photo-cake.png&w=750&q=75"
+                    alt="Black Forest Cake">
+                <h3>Mickey mouse clubhouse photo cake 500gm</h3>
+                <p>₹799</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://assets.winni.in/product/primary/2021/9/53476.jpeg?dpr=1&w=400" alt="Chocolate Truffle Cake">
+                <h3>Mickey Mouse Cartoon Cake</h3>
+                <p>₹599</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://dy9wzeeht8myy.cloudfront.net/images/catalog/Cakes/CH633-350x350.jpg" alt="Fruit Overload Cake">
+                <h3>Chota Bheem Cake</h3>
+                <p>₹725</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-gorgeous-lion-cream-cake-them2120flav-AA.jpg?tr=h-320,w-320" alt="Black Forest Cake">
+                <h3>Lion Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/swirly-minnie-mouse-cake-phot3853flav-A.jpg" alt="Chocolate Truffle Cake">
+                <h3>Swirly Minnie Mouse Cake</h3>
+                <p>₹599</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-tom-fondant-cake-them2157flav-A_0.jpg" alt="Fruit Overload Cake">
+                <h3>Round Fondant Tom Cake</h3>
+                <p>₹725</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-mickey-mouse-themed-cake-them1314flav-A_0.jpg" alt="Black Forest Cake">
+                <h3>Sprinkled Mickey Mouse Cream Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-round-delicious-hello-kitty-cake-them1417flav-A_0.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <h3>Hello Kitty Cream Cake
+                </h3>
+                <p>₹599</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/DSC_2011.jpg?tr=w-320,h-320,q-70" alt="Fruit Overload Cake">
+                <h3>Monkey Mischief Cake</h3>
+                <p>₹725</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/mini-mouse-birthday-photo-cake-phot3821flav-A.jpg?tr=w-320,h-320,q-70" alt="Black Forest Cake">
+                <h3>Mini Mouse Birthday Photo Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-motu-patlu-fondant-cake-them1329flav-A_0.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <h3>Motu Patlu Fondant Cake</h3>
+                <p>₹599</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/sq-one-number-micky-cake-them1458flav-A_0.jpg" alt="Fruit Overload Cake">
+                <h3>First Birthday Cream Cake</h3>
+                <p>₹725</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/squ-tom-n-jerry-poster-cake-phot1344flav-A.jpg" alt="Black Forest Cake">
+                <h3>Tom N Jerry Poster Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/squ-_jungle-book-birthday-photo-cake-rectangle-shape-phot0597flav-A.jpg?tr=w-320,h-320,q-70" alt="Chocolate Truffle Cake">
+                <h3>Jungle Book Birthday Poster Cake Square Shape</h3>
+                <p>₹599</p>
+                <p>Rating: 4.8★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/custom-cream-cocomelon-cake-phot2819flav-C_0.jpg?tr=w-320,h-320,q-70" alt="Fruit Overload Cake">
+                <h3>Round White Funfetti Photo Bday Cake</h3>
+                <p>₹725</p>
+                <p>Rating: 5.0★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://bkmedia.bakingo.com/pokemon-theme-photo-cake-phot2820flav-A.jpg?tr=w-320,h-320,q-70" alt="Black Forest Cake">
+                <h3>Palatable Poke Ball Photo Birthday Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 4.9★</p>
+            </div>
+            <div class="cake-item">
+                <img src="https://www.thecake.in/image/cache/catalog/cake/dragon-cartoon-cake-from-thecake-500x500.jpg" alt="Black Forest Cake">
+                <h3>Black Forest Cake</h3>
+                <p>₹549</p>
+                <p>Rating: 4.9★</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

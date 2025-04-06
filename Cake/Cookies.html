@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Selection</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* starting Internal CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cake-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .cake-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cake-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cake-card p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .rating {
+            color: #f39c12;
+            font-size: 14px;
+        }
+
+        /* media query */
+
+        @media (max-width: 768px) {
+            .cake-card {
+                width: 40%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cake-card {
+                width: 100%;
+            }
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 class="heading">Cookies</h1>
+    <br>
+    <br><br>
+    <!-- row one -->
+    <div class="container">
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/crumbly-choco-chip-cookies-coo2731choco-A.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Chocolate Mud Cake">
+            <h3>Choco Chip Cookies</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (179)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/handmade-almond-cookies-coo2730alm-A.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>KitKat Chocolate Truffle Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTKNUn0avY-1vgBPsugu1BgRNNwcsY7XBh2UoxlHFHN5tJwm8AXyLLYZlhlESR3oZDarTQLleAS5xBSVQsrYcWV8W7AIiqvHmqP0ptKl4SupaTtOOB6PD4UchY"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Chocolate Chip Cookies Freshly Baked Cookies</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5D7ayckgOJOo3j4x8QvwCYwqDhtpBJKK1Ncbgm_CRdw9QbtO-DzSv7PJdjTGxrGEAyrA&usqp=CAU"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Easy Chocolate Meltaway Cookies</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <!-- row two -->
+    <br>
+
+    <div class="container">
+
+        <!-- Cake Card 1 -->
+        <div class="cake-card">
+            <img src="https://www.modernhoney.com/wp-content/uploads/2023/08/Nestle-Toll-House-Chocolate-Chip-Cookies-Recipe-crop.jpg"
+                alt="Chocolate Mud Cake">
+            <h3>Nestle Toll House Chocolate Chip Cookies</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <!-- Cake Card 2 -->
+        <div class="cake-card">
+            <img src="https://handletheheat.com/wp-content/uploads/2021/10/brown-butter-chocolate-chip-cookie-SQUARE.png"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Brown Butter Chocolate Chip Cookies</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <!-- Cake Card 3 -->
+        <div class="cake-card">
+            <img src="https://sugarspunrun.com/wp-content/uploads/2023/03/Nutella-Cookies-recipe-1-of-1-5.jpg"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Nutella Cookies</h3>
+            <p>₹599 <span class="old-price">₹649</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <!-- Cake Card 4 -->
+        <div class="cake-card">
+            <img src="https://www.tastesoflizzyt.com/wp-content/uploads/2024/03/cool-whip-cookies-1200-6.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Cool Whip Cookies</h3>
+            <p>₹549 <span class="old-price">₹649</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+        <!-- row three -->
+        <div class="cake-card">
+            <img src="https://www.shugarysweets.com/wp-content/uploads/2023/05/cool-whip-cookies-recipe.jpg"
+                alt="Chocolate Mud Cake">
+            <h3>Cool Whip Cookies</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.cookingclassy.com/wp-content/uploads/2021/12/linzer-cookies-2-500x500.jpg"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Linzer Cookies</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.browneyedbaker.com/wp-content/uploads/2018/12/Danish-butter-cookies-4-1200-500x500.jpg"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Butter cookies</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.bunsenburnerbakery.com/wp-content/uploads/2017/12/black-and-white-cookies-square-20-735x735.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Black and White cookies</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br>
+
+    </div>
+    <!-- row four -->
+    <div class="container">
+        <div class="cake-card">
+            <img src="https://joyfoodsunshine.com/wp-content/uploads/2019/12/best-soft-gingerbread-cookies-recipe-9.jpg"
+                alt="Chocolate Mud Cake">
+            <h3>Gingerbread cookies</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://mycookiejourney.com/wp-content/uploads/2023/09/shortbread-cookies-with-jam-feature.jpg"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Shortbread Cookies with Jam</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://lovingitvegan.com/wp-content/uploads/2021/10/Vegan-Oatmeal-Raisin-Cookies-Square-2.jpg"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Oatmeal raisin cookies</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.kulickscookierecipes.com/wp-content/uploads/2022/08/Peanut-butter-cookie-recipe.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Peanut butter cookies</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br>
+    <!-- row five -->
+    <div class="container">
+        <div class="cake-card">
+            <img src="https://joyfoodsunshine.com/wp-content/uploads/2019/07/snickerdoodles-recipe-2.jpg"
+                alt="Chocolate Mud Cake">
+            <h3>Shortbread cookies</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://theloopywhisk.com/wp-content/uploads/2021/12/Gluten-Free-Pistachio-Biscotti_730px-featured.jpg"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Gluten Free Pistachio Biscotti</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://handletheheat.com/wp-content/uploads/2023/01/whoopie-pies-SQUARE.jpg"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Classic Whoopie Pies</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.sweetestmenu.com/wp-content/uploads/2019/02/chocolatepeanutbuttercookies5a-650x650.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Heart on Heart Chocolate Truffle Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br>
+    <!-- row six -->
+    <!-- <div class="container">
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/chocolate-mud-cake0035choc-AA.jpg?tr=w-320,h-320,q-70"
+                alt="Chocolate Mud Cake">
+            <h3>Chocolate Mud Cake</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/butterscotch-cake0003butt-AAAA.jpg?tr=w-320,h-320,q-70"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Butterscotch Cherry Topped Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/double-heart-choco-truffle-cake0034hech-AA.jpg?tr=w-320,h-320,q-70"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Heart Shaped Red Velvet Cake</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/choco-truffle-cake-2-cake896choc-AAA.jpg?tr=w-320,h-320,q-70"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Heart on Heart Chocolate Truffle Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br> -->
+    <!-- row seven -->
+    <!-- <div class="container">
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/chocolate-mud-cake0035choc-AA.jpg?tr=w-320,h-320,q-70"
+                alt="Chocolate Mud Cake">
+            <h3>Chocolate Mud Cake</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/butterscotch-cake0003butt-AAAA.jpg?tr=w-320,h-320,q-70"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Butterscotch Cherry Topped Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/double-heart-choco-truffle-cake0034hech-AA.jpg?tr=w-320,h-320,q-70"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Heart Shaped Red Velvet Cake</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/choco-truffle-cake-2-cake896choc-AAA.jpg?tr=w-320,h-320,q-70"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Heart on Heart Chocolate Truffle Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br> -->
+    <!-- row eight -->
+    <!-- <div class="container">
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/chocolate-mud-cake0035choc-AA.jpg?tr=w-320,h-320,q-70"
+                alt="Chocolate Mud Cake">
+            <h3>Chocolate Mud Cake</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/butterscotch-cake0003butt-AAAA.jpg?tr=w-320,h-320,q-70"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Butterscotch Cherry Topped Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/double-heart-choco-truffle-cake0034hech-AA.jpg?tr=w-320,h-320,q-70"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Heart Shaped Red Velvet Cake</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/choco-truffle-cake-2-cake896choc-AAA.jpg?tr=w-320,h-320,q-70"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Heart on Heart Chocolate Truffle Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br> -->
+    <!-- row nine -->
+    <!-- <div class="container">
+        <div class="cake-card">
+            <img src="https://www.indiacakes.com/media/catalog/product/cache/42564c299a802410e3afea9df8cf254b/m/o/moreish-pineapple-cake-half-kgs.webp"
+                alt="Chocolate Mud Cake">
+            <h3>Chocolate Mud Cake</h3>
+            <p>₹599</p>
+            <p class="rating">4.9 ★ (178)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.indiacakes.com/media/opti_image/webp/catalog/product/cache/42564c299a802410e3afea9df8cf254b/9/7/97.webp"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>Butterscotch Cherry Topped Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/sq-round-dark-chocolate-valentine-love-cake-cake2572choc-A_2.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Chocolate Cake With Love Topper</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/sq-lip-smacking-chocolate-truffle-cake-cake2161choc-A_0.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Rich Chocolate Truffle Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br> -->
+    <!-- row ten -->
+    <!-- <div class="container">
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/squ-choco-black-forest-cake-cake888blac-A.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Chocolate Mud Cake">
+            <h3>Cherry Chocolate Black Forest Cake</h3>
+            <p>₹649 <span class="old-price">₹749</span> 10% OFF</p>
+            <p class="rating">4.7 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/kitkat-chocolate-cake-cake1119choco-AAA.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>KitKat Chocolate Truffle Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.7 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/sq-snicker-chocolate-cake0028choc-AA.jpg?tr=w-320,h-320,dpr-2,q-70"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Chocolate Loaded Glazed Cake</h3>
+            <p>₹699<span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://bkmedia.bakingo.com/sq-gratifying-touch-cake-moth0115choc-B_0.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>Choco Truffle Delight For Mom</h3>
+            <p>₹649 <span class="old-price">₹700</span> 13% OFF</p>
+            <p class="rating">4.8 ★ (62)</p>
+        </div>
+    </div> -->
+    <!-- that's end -->
+
+
+</body>
+
+</html>

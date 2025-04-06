@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration:none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .filters {
+            width: 25%;
+            background-color: #299f0c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .filters h2 {
+            margin-bottom: 10px;
+        }
+
+        .filters ul {
+            list-style: none;
+        }
+
+        .filters li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            color: #f7f2f2;
+        }
+
+        .cakes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 70%;
+        }
+
+        .cake-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .cake-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .cake-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .cake-card p {
+            font-size: 1em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .filters {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .cakes {
+                width: 100%;
+            }
+
+            .cake-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <H1 style="text-align: center;">Pestry</H1>
+    <br><br>
+    <div class="container">
+        <aside class="filters">
+            <h2>Filters</h2>
+            <ul>
+                <li><a href="" style="color: #f7f2f2;">Price</a></li>
+                <li><a href="" style="color: #f7f2f2;">Flavour</a></li>
+                <li><a href="" style="color: #f7f2f2;">Cake Type</a></li>
+                <li><a href="" style="color: #f7f2f2;">Ingredients</a></li>
+                <li><a href="" style="color: #f7f2f2;">Shape</a></li>
+                <li><a href="" style="color: #f7f2f2;">Weight</a></li>
+            </ul>
+        </aside>
+
+        <section class="cakes">
+            <div class="cake-card">
+                <img src="https://theobroma.in/cdn/shop/files/EgglessDutchTrufflePastry.jpg?v=1711099798"
+                    alt="Decorated Chocolate Truffle Cake">
+                <h3>Eggless Dutch Truffle Pastry</h3>
+                <p>₹130</p>
+                <p>Rating: <strong>5.0</strong></p>
+            </div>
+
+            <div class="cake-card">
+                <img src="https://bkmedia.bakingo.com/mouth-watering-red-velvet-past0163redv-AA.jpg?tr=w-500,h-500"
+                    alt="Rose Paradise Chocolate Cake">
+                <h3>Red Velvet Pastry</h3>
+                <p>₹109</p>
+                <p>Rating: <strong>5.0</strong></p>
+            </div>
+
+            <div class="cake-card">
+                <img src="https://justbakedcake.com/wp-content/uploads/2020/09/Black-Forest-Pastry-1.jpg"
+                    alt="Chocolate Truffle Delicious Cake">
+                <h3>Black Forest Pastry</h3>
+                <p>₹55.00</p>
+                <p>Rating: <strong>4.6</strong></p>
+            </div>
+            <!--  -->
+            <div class="cake-card">
+                <img src="https://bkmedia.bakingo.com/tasty-chocolate-truffle-past0162choc-AAA.jpg"
+                    alt="Decorated Chocolate Truffle Cake">
+                <h3>Chocolate Truffle Pastry</h3>
+                <p>₹99</p>
+                <p>Rating: <strong>5.0</strong></p>
+            </div>
+
+            <div class="cake-card">
+                <img src="https://cdn-jpbin.nitrocdn.com/sYLTElulopiLltYccZgkISfjEcRemCCS/assets/images/optimized/rev-1f0c853/jodhpursweethomeandbakers.com/wp-content/uploads/2023/08/Pastry-jodhpur-sweet-home-and-bakerrs.jpg"
+                    alt="Rose Paradise Chocolate Cake">
+                <h3>Black Forest Pastry</h3>
+                <p>₹40.00 </p>
+                <p>Rating: <strong>5.0</strong></p>
+            </div>
+
+            <div class="cake-card">
+                <img src="https://cdn11.bigcommerce.com/s-vm6doh2w4n/products/7699/images/19599/n3lfqoxszbyou8hteko3__29007.1692651585.386.513.jpg?c=1"
+                    alt="Chocolate Truffle Delicious Cake">
+                <h3>Dark Chocolate Orange Pastry</h3>
+                <p>₹599</p>
+                <p>Rating: <strong>4.6</strong></p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

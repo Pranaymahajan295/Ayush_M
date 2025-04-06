@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cake-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .cake-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .cake-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cake-card p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .rating {
+            color: #f39c12;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .cake-card {
+                width: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cake-card {
+                width: 100%;
+            }
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Chocolaty Cake</h1>
+    <br>
+    <br><br>
+    <!-- row one -->
+    <div class="container">
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/chocolaty-rose-cake-1kg_1.jpg"
+                alt="Chocolate Mud Cake">
+                <h3>Choco Chip Truffle Cake</h3>
+                <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+                <p class="rating">4.9 ★ (179)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/special-butterscotch-cake-1kg_1.jpg"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>KitKat Chocolate Truffle Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/fresh-vanilla-cake-1kg_1.jpg"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Round Chocolate Rakhi Photo Cake</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/butterscotch-cake-with-rasmalai-2kg_1.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>New Year Chocolate Cream Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+    <br>
+    <!-- orw two  -->
+    <div class="container">
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/chocolaty-rose-cake-1kg_1.jpg"
+                alt="Chocolate Mud Cake">
+                <h3>Choco Chip Truffle Cake</h3>
+                <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+                <p class="rating">4.9 ★ (179)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/special-butterscotch-cake-1kg_1.jpg"
+                alt="Butterscotch Cherry Topped Cake">
+            <h3>KitKat Chocolate Truffle Cake</h3>
+            <p>₹499 <span class="old-price">₹549</span> 10% OFF</p>
+            <p class="rating">4.9 ★ (1365)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/fresh-vanilla-cake-1kg_1.jpg"
+                alt="Heart Shaped Red Velvet Cake">
+            <h3>Round Chocolate Rakhi Photo Cake</h3>
+            <p>₹749 <span class="old-price">₹799</span> 7% OFF</p>
+            <p class="rating">4.9 ★ (94)</p>
+        </div>
+
+        <div class="cake-card">
+            <img src="https://www.fnp.com/images/pr/l/v200/butterscotch-cake-with-rasmalai-2kg_1.jpg"
+                alt="Heart on Heart Chocolate Truffle Cake">
+            <h3>New Year Chocolate Cream Cake</h3>
+            <p>₹699 <span class="old-price">₹799</span> 13% OFF</p>
+            <p class="rating">4.9 ★ (62)</p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
