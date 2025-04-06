@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>flex</title>
+    <style>
+        /* main contener */
+        .main-contener {
+            background-color: blue;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .one {
+            height: 100vh;
+            width: 20vw;
+        }
+        .one-child{
+            background-color: rgb(67, 223, 111);
+            height: 50vh;
+            width: 20vw;
+        }
+
+        .second {
+            background-color: goldenrod;
+            height: 100vh;
+            width: 80vw;
+            display: flex;
+            flex-direction:column;
+        }
+        .top{
+            background-color: rgb(0, 0, 0);
+            height:30vh;
+            width:80vw;
+        }
+        .bottem{
+            background-color:rgb(208, 52, 52);
+            height:30vh;
+            width:80vw;
+        }
+        .medium{
+            background-color: rgb(12, 234, 71);
+            height:40vh;
+            width:80vw;
+            display: flex;
+            flex-direction: row;
+        }
+        .mid-one{
+            background-color: #ffee01;
+            height: 50vh;
+            width: 40vw;
+        }
+        .mid-two{
+            background-color: rgb(255, 146, 3);
+            height: 50vh;
+            width: 40vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-contener">
+        <div class="one">
+            <div class="one-child"></div>
+        </div>
+        <div class="second">
+            <div class="top"></div>
+            <div class="medium">
+                <div class="mid-one"></div>
+                <div class="mid-two"></div>
+            </div>
+            <div class="bottem"></div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

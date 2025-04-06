@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="sass.scss">
+  <style>
+    body {
+        background-color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .container input[type="submit"] {
+      width: 100%;
+      background-color: #388648;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+
+    .container .password {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .container .password a {
+      color: #4CAF50;
+      
+    }
+
+    .container .password a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Create account</h2>
+    <form >
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" >
+
+      <label for="username">Email</label>
+      <input type="text" id="username" name="username" >
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" >
+
+      <input type="submit" value="Login">
+      
+      <div class="password" class="ayush">
+        <a href="" >Forgot your password?</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

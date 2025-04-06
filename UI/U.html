@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 30%;
+        }
+
+        .main {
+            background-color: rgb(83, 90, 211);
+            height: 80vh;
+            width: 40vw;
+            border-radius: 50px;
+            padding-top: 2%;
+        }
+
+        .display {
+            background-color: white;
+            height: 70%;
+            width: 90%;
+            border-radius: 50px;
+            margin-left: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .one-button {
+            background-color: seagreen;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid black;
+            margin-left: 40px;
+        }
+
+        .two-button {
+            background-color: seagreen;
+            height: 50px;
+            margin-top: 10%;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid black;
+            margin-left: 200px;
+        }
+    </style>
+    <!-- start script -->
+    <script>
+        function buttonClick(dk) {
+            let x = document.getElementById("display").innerHTML = dk;
+            console.log(x);
+            alert(x);
+
+        }
+
+
+        function showContent() {
+            let temp = document.getElementsByTagName("template")[0];
+            let clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display" id="display"></div>
+
+        <button class="one-button" onclick="buttonClick('Ayush mahajan')">button one</button>
+        <button class="two-button" onclick="buttonClick('pranay mahajan')">button two</button>
+
+    </div>
+
+</body>
+
+</html>

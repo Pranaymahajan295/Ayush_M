@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: rgba(0, 0, 0, 0.87);
+            color: #fcfbfb;
+            background: url(https://etimg.etb2bimg.com/photo/104778347.cms) no-repeat center center/cover;
+            background-attachment:scroll;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: transparent;
+
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar a:hover {
+            color: #000000;
+            text-decoration: underline 3px;
+            gap: 8px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+            height: 80vh;
+        }
+
+        .overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 20px;
+        }
+
+        .overlay h1 {
+            color: #e3eb15;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .overlay button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* .overlay button:hover {
+            background-color: #ff6347;
+        } */
+
+        .welcome-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffff06;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards, slideIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .reservation-button {
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin-left: 25%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .reservation-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        .order-button{
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin-left: 32%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .order-button:hover{
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Events</a>
+        <a href="#">Delivery</a>
+        <a href="#">Venue Fact Sheet</a>
+    </div>
+    <div class="content">
+        <div class="welcome-text">Welcome to Haldiram
+            <br><br>
+            <div class="button">
+                <button class="reservation-button">MAKE RESERVATION</button>
+                <button class="order-button">Online Order</button>
+            </div>
+        </div>
+    </div>
+    </div>
+   
+
+
+</body>
+
+</html>

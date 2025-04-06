@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>calculator</title>
+    <!-- use in internal style -->
+    <style>
+        body {
+            background-image: url(https://images.pexels.com/photos/5412499/pexels-photo-5412499.jpeg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main-box {
+            height: 70vh;
+            width: 32vw;
+            margin-left: 30%;
+            margin-top: 10%;
+            border: 2px rgb(0, 0, 0) solid;
+        }
+
+        .display {
+            height: 15vh;
+            width: 32vw;
+            text-align: center;
+
+        }
+
+        .key {
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        .button {
+            height: 11vh;
+            width: 10vw;
+            color: green;
+            border-radius: 10px;
+
+        }
+
+        .bottom {
+            width: 21vw;
+            border-radius: 10px;
+
+        }
+
+        .last {
+            background-color: #ff7b00d8;
+            border-radius: 10px;
+            width: 10vw;
+            border: 1px solid;
+        }
+    </style>
+    <!-- script start -->
+    <script>
+
+        function buttonClick(ayush) {
+            document.getElementById("display").innerHTML = ayush;
+        }
+        function clearText() {
+            document.getElementById("display").innerHTML = mahajan;
+
+        }
+
+        function thirdOutput() {
+            console.log("you typed an even number");
+        }
+        function thirdO() {
+            alert("hello")
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="main-box">
+        <div class="display" id="display"></div>
+        <!-- 4 button for first line  -->
+        <div class="key">
+            <button class="button" onclick="buttonClick('')">A/C</button>
+            <button class="button" onclick="buttonClick()"> &larr; </button>
+            <button class="button" onclick="buttonClick()">%</button>
+            <button class="last" onclick="buttonClick()">÷</button>
+
+        </div>
+        <!-- 4 button for second line  -->
+        <div class="key">
+            <button class="button" onclick="thirdO()">7</button>
+            <button class="button" onclick="buttonClick(8)">8</button>
+            <button class="button" onclick="buttonClick(9)">9</button>
+            <button class="last" onclick="buttonClick()">×</button>
+
+        </div>
+        <!-- 4 button for third line  -->
+        <div class="key">
+            <button class="button" onclick="buttonClick(4)">4</button>
+            <button class="button" onclick="buttonClick(5)">5</button>
+            <button class="button" onclick="buttonClick(6)">6</button>
+            <button class="last" onclick="buttonClick()">-</button>
+
+        </div>
+        <!-- 4 button for fourth line  -->
+        <div class="key">
+            <button class="button" onclick="buttonClick(1)">1</button>
+            <button class="button" onclick="thirdOutput(2)">2</button>
+            <button class="button" onclick="buttonClick(3)">3</button>
+            <button class="last" onclick="buttonClick()">+</button>
+
+        </div>
+        <div class="key">
+            <button class="bottom" onclick="buttonClick(0)">0</button>
+            <button class="button" onclick="buttonClick('.')">.</button>
+            <button class="last" onclick="buttonClick()">=</button>
+
+
+        </div>
+
+    </div>
+
+    </div>
+    <br><br>
+
+</body>
+
+</html>

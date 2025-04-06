@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .display {
+            background-color: rgb(0, 0, 0);
+            height: 30vh;
+            width: 30vw;
+            color: white;
+        }
+
+        body {
+            margin-left: 35%;
+            width: 78%;
+            background-color: rgb(59, 47, 113);
+
+        }
+
+        button {
+
+            height: 40px;
+            width: 100px;
+            margin-left: 34%;
+            margin-top: 3%;
+            cursor: pointer;
+            background-color: lightseagreen;
+
+        }
+
+        .border {
+            border: 1px solid black;
+            width: 39%;
+
+        }
+    </style>
+    <script>
+        function dataType() {
+            let x = document.getElementById("input-one").value;
+            x = Number(x);
+            let z = 10 + x;
+            document.getElementById("display-box").innerHTML = z;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="border">
+        <div class="display"></div>
+        <input id="input-one" type="text" onclick="dataType()" style="width: 97%; height: 44px; font-size: 24px" /><br>
+        <br>
+        <button onclick="dataType()">click here</button>
+    </div>
+</body>
+
+</html>

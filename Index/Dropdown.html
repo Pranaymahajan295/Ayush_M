@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Dropdown Menu</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Container for dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    /* Dropdown Button */
+    .dropbtn {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropbtn:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown Content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 1;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      opacity: 0;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      padding-left: 30px;
+    }
+
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Media query for responsiveness */
+    @media (max-width: 600px) {
+      .dropbtn {
+        width: 100%;
+        font-size: 18px;
+        padding: 18px;
+      }
+
+      .dropdown-content {
+        min-width: 100%;
+      }
+
+      .dropdown-content a {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Explore More</button>
+  <div class="dropdown-content">
+    <a href="#">About Us</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="#">Careers</a>
+  </div>
+</div>
+
+</body>
+</html>

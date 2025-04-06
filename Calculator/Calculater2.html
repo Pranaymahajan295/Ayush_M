@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            color: black;
+        }
+
+        body {
+            background-color: cadetblue;
+            height: 100vh;
+            width: 100vw;
+            margin-left: 40%;
+            margin-top: 13%;
+
+        }
+
+        button {
+            height: 50px;
+            width: 60px;
+        }
+
+        #text-area {
+            height: 12vh;
+            width: 17vw;
+        }
+
+        .Zero {
+            width: 8.6vw;
+        }
+    </style>
+    <script>
+        function buttonClick(ayush) {
+            document.getElementById("text-area").innerHTML = ayush;
+            // input
+            let x = document.getElementById("").innerHTML = ayush;
+            let y = document.getElementById("").innerHTML = ayush;
+            // process
+            z = Number(x) + Number(y);
+            // output
+            document.getElementById("display").innerHTML = z;
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <section class="main-conteiner">
+        <div class="display"><textarea name="text" id="text-area"></textarea></div>
+        <div>
+            <button onclick="buttonClick('')">A/C</button>
+            <button>&larr;</button>
+            <button>%</button>
+            <button>+</button>
+        </div>
+        <div class="display"></div>
+        <div>
+            <button onclick="buttonClick('7')">7</button>
+            <button onclick="buttonClick('8')">8</button>
+            <button onclick="buttonClick('9')">9</button>
+            <button>×</button>
+        </div>
+        <div class="display"></div>
+        <div>
+            <button onclick="buttonClick('4')">4</button>
+            <button onclick="buttonClick('5')">5</button>
+            <button onclick="buttonClick('6')">6</button>
+            <button>-</button>
+        </div>
+        <div class="display"></div>
+        <div>
+            <button onclick="buttonClick('1')">1</button>
+            <button onclick="buttonClick('2')">2</button>
+            <button onclick="buttonClick('3')">3</button>
+            <button>+</button>
+        </div>
+        <div class="display"></div>
+        <div>
+            <button class="Zero" onclick="buttonClick('0')">0</button>
+            <button>.</button>
+            <button>=</button>
+        </div>
+    </section>
+</body>
+
+</html>
