@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <!-- style -->
+    <style>
+        * {
+            text-align: center;
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /* table */
+        table {
+            height: 70vh;
+            width: 25vw;
+            border: 1px solid black;
+            border-width: 3px;
+            border-collapse: collapse
+        }
+
+        /* input box */
+        .input-box {
+            background-color: rgb(255, 255, 255);
+            height: 100px;
+            font-size: 60px;
+            text-align: right;
+        }
+
+        /* button start */
+        .All-clear {
+            background-color: rgb(127, 127, 125);
+            border: 1px solid black;
+            border-width: 3px;
+            font-size: 30px;
+
+        }
+
+        .row-one {
+            background-color: grey;
+            border: 1px solid black;
+            border-width: 3px;
+            width: 70px;
+            font-size: 30px;
+
+        }
+
+        .row-two {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            background-color: grey;
+            width: 70px;
+            font-size: 30px;
+
+        }
+
+        .row-three {
+            background-color: rgb(252, 124, 19);
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            font-size: 30px;
+
+        }
+
+        .table-data7 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data8 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data9 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data-ml {
+            background-color: rgb(252, 124, 19);
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            width: 70px;
+            font-size: 30px;
+
+        }
+
+        .table-data4 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data5 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data6 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data-sub {
+            background-color: rgb(252, 124, 19);
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            font-size: 30px;
+
+        }
+
+        .table-data1 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data2 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data3 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+
+        .table-data-add {
+            background-color: rgb(252, 124, 19);
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            font-size: 30px;
+
+        }
+
+        .table-data0 {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .table-data- {
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+             background-color: rgb(41, 255, 155);
+            font-size: 30px;
+
+        }
+
+        .All-clear0 {
+            background-color: rgb(252, 124, 19);
+            border-style: solid;
+            border-color: black;
+            border-width: 3px;
+            font-size: 30px;
+
+        }
+
+        /* end */
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <!-- table -->
+        <table>
+            <tr>
+                <td colspan="4" class="input-box">23</td>
+
+            </tr>
+            <!-- button -->
+            <tr>
+                <td class="All-clear">AC</td>
+                <td class="row-one">+/-</td>
+                <td class="row-two">%</td>
+                <td class="row-three">÷</td>
+
+            </tr>
+            <!-- row one  -->
+            <tr>
+                <td class="table-data7">7</td>
+                <td class="table-data8">8</td>
+                <td class="table-data9">9</td>
+                <td class="table-data-ml">×</td>
+            </tr>
+            <!-- row two -->
+            <tr>
+                <td class="table-data4">4</td>
+                <td class="table-data5">5</td>
+                <td class="table-data6">6</td>
+                <td class="table-data-sub">-</td>
+            </tr>
+            <!-- row three -->
+            <tr>
+                <td class="table-data1">1</td>
+                <td class="table-data2">2</td>
+                <td class="table-data3">3</td>
+                <td class="table-data-add">+</td>
+            </tr>
+            <!-- row four -->
+            <tr>
+                <td colspan="2" class="table-data0">0</td>
+                <td class="table-data-">.</td>
+                <td class="All-clear0">=</td>
+
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
